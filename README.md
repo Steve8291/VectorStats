@@ -17,9 +17,9 @@ VectorStats my_buffer = VectorStats(255);
 ```
 
 ### Resize the Buffer
+The size can be changed during runtime but not larger than what was passed to the constructor above (255).
+Resizing also causes all data to be zeroed.
 ```cpp
-// The size can be changed during runtime but not larger than what was passed to the constructor above (255).
-// Resizing also causes all data to be zeroed.
 my_buffer.resize(100);
 ```
 
@@ -46,9 +46,9 @@ void loop() {
 ```
 
 ### Fill the Buffer With a Single Value
+Every value in the buffer will be set to (2084).
+This also sets the isBufferFull() flag to true.
 ```cpp
-// Every value in the buffer will be set to (2084).
-// This also sets the isBufferFull() flag to true.
 my_buffer.fillBuffer(2084);
 ```
 
@@ -69,6 +69,7 @@ Always returns the average as a float. Will set `.isBufferFull()` to false.
 ```cpp
 if (my_buffer.isBufferFull()) {
   float average = my_buffer.getAverage();
+}
 ```
 
 ### Get the Standard Deviation of a Full Buffer
@@ -77,6 +78,7 @@ Always returns a float. Will set `.isBufferFull()` to false.
 ```cpp
 if (my_buffer.isBufferFull()) {
   float std_dev = my_buffer.getStdDev();
+}
 ```
 
 ### Access an Element By Index
@@ -86,8 +88,8 @@ int16_t element = my_buffer.getElement(3);
 ```
 
 ### Access Elements in Sorted Order From Smallest to Largest
+If you have a buffer size of 100 this would print all the elements to serial.
 ```cpp
-// If you have a buffer size of 100 this would print all the elements to serial:
 int buffer_size = 100;
 for (int i = 0; i < buffer_size; ++i) {
   Serial.println(my_buffer.getSortedElement(i));
