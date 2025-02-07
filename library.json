@@ -1,0 +1,22 @@
+{
+  "name": "VectorStats",
+  "version": "1.0.0",
+  "description": "Fast vector based statistics for analog data.",
+  "keywords": "buffer, statistics, stats, vector, median, average, mean, standard deviation, slope",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Steve8291/VectorStats.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Steve Hambling",
+      "email": "hambling8@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
