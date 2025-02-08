@@ -1,8 +1,8 @@
 {
   "name": "VectorStats",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fast vector based statistics for analog data.",
-  "keywords": "buffer, statistics, stats, vector, median, average, mean, standard deviation, slope",
+  "keywords": "buffer, statistics, stats, vector, smoothing, median, average, mean, standard deviation, slope",
   "repository":
   {
     "type": "git",

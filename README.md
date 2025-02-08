@@ -1,5 +1,6 @@
 # VectorStats
 ## A fast vector based statistics buffer for analog data collection.
+In my tests this library is 1-1.5x faster than other libraries at adding 255 data values and then calculating median.
 I originally created this library specifically for use with analog data collection.
 It is useful as both a high speed buffer for data collection in a project and also as a way of checking data quality and smoothing. Check out my other program `thermistor_calibration` that uses this library to help determine the best buffer size for oversampling as well as a way to compare taking the average vs the median of your data.
 

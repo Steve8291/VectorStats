@@ -1,8 +1,18 @@
 # Syntax Coloring Map for Calculator
 
 # Data types (KEYWORD1)
-Calculator   KEYWORD1
+VectorStats   KEYWORD1
 
 # Methods and Functions (KEYWORD2)
-add       KEYWORD2
-subtract  KEYWORD2
+resize              KEYWORD2
+add                 KEYWORD2
+fillBuffer          KEYWORD2
+getMedian           KEYWORD2
+getAverage          KEYWORD2
+getStdDev           KEYWORD2
+getElement          KEYWORD2
+getSortedElement    KEYWORD2
+isBufferFull        KEYWORD2
+setBufferFullFalse  KEYWORD2
+zeroBuffer          KEYWORD2
+compareFirstLast    KEYWORD2
