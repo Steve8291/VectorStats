@@ -1,0 +1,24 @@
+Time difference of 100 runs from VectorStats (ms)
+
+Samples     DataTome    RunningMedian   Notes
+  15	        1.9	     1.0	
+  31	        4.6	     2.5	
+  65	       12.4	     7.4	
+ 129	       30.5	    23.3	
+ 254	      154.6	    75.0	        EVEN BUFFER
+ 255	       89.6	    78.3	        RunningMedian(255)
+ 511	      257.6	    77.1	        RunningMedian(255)
+1025	     1173.8	    73.9	        RunningMedian(255)
+2049	     3319.1	    67.0	        RunningMedian(255)
+4095	    13363.6	    54.3	        RunningMedian(255)
+4096	    35857.9	    11.8	        RunningMedian(254) EVEN BUFFER
+
+Time to fill buffer and get median 100 times (ms) on an ESP32.
+The time for 100 runs at the given sample size was summed for each library and then the sum of VectorStats was subtracted.
+This was done rather than averaging because the times for DataTome were not consistent, with some taking much longer.
+VectorStats was up to 1.5x faster with a large buffer size of 4095.
+With an even buffer size of 4096, VectorStats was up to 2.5x faster.
+RunningMedian is limited to a max buffer size of 255, but it was still slower than VectorStats at large buffer sizes.
+At larger sample sizes, VectorStats is significantly faster.
+It also outperforms when using even-sized buffers.
+As the sample size gets down to around 255 the differences become negligible.

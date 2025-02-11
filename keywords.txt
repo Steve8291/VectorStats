@@ -4,7 +4,9 @@
 VectorStats   KEYWORD1
 
 # Methods and Functions (KEYWORD2)
+size                KEYWORD2
 resize              KEYWORD2
+zeroBuffer          KEYWORD2
 add                 KEYWORD2
 fillBuffer          KEYWORD2
 getMedian           KEYWORD2
@@ -12,7 +14,8 @@ getAverage          KEYWORD2
 getStdDev           KEYWORD2
 getElement          KEYWORD2
 getSortedElement    KEYWORD2
-isBufferFull        KEYWORD2
+BufferFull          KEYWORD2
 setBufferFullFalse  KEYWORD2
-zeroBuffer          KEYWORD2
-compareFirstLast    KEYWORD2
+getOutliers         KEYWORD2
+getLeftSkew         KEYWORD2
+getSlope            KEYWORD2

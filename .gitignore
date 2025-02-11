@@ -1,0 +1,10 @@
+.pio
+.vscode
+*.code-workspace
+.DS_Store
+include
+lib
+src/main.cpp
+test
+test_code
+platformio.ini
