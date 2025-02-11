@@ -1,5 +1,8 @@
 # Change Log VectorStats
 
+## [2.0.1] - 2025-02-11
+- README.md updated for version 2.0
+
 ## [2.0.0] - 2025-02-11
 - Rewritten to allow choice of data type.
 - Can now create buffer of any type of integer or floating point!
