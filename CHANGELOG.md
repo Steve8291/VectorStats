@@ -1,5 +1,11 @@
 # Change Log VectorStats
 
+## [2.0.2] - 2025-02-18
+- Fixed calibrate_thermistor link in readme
+- Added array vs vector test.
+- Added average_speedtest.cpp
+- Added speedtest for different buffer types: int16_t, int32_t, int64_t, float, double
+
 ## [2.0.1] - 2025-02-11
 - README.md updated for version 2.0
 

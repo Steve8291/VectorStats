@@ -9,8 +9,8 @@
 
 
 #include <Arduino.h>
-#include <DataTome.h>            // https://github.com/AlexandreHiroyuki/DataTome/tree/main    robtillaart/RunningMedian@^0.3.9
-#include <RunningMedian.h>       // https://github.com/RobTillaart/RunningMedian/tree/master   alexandrehiroyuki/DataTome@^1.8.1
+#include <DataTome.h>            // https://github.com/AlexandreHiroyuki/DataTome/tree/main    alexandrehiroyuki/DataTome@^1.8.1
+#include <RunningMedian.h>       // https://github.com/RobTillaart/RunningMedian/tree/master   robtillaart/RunningMedian@^0.3.9
 #include <VectorStats.h>         // https://github.com/Steve8291/VectorStats
 
 const int SAMPLE_SIZE = 4095;  // Number of samples to collect.
@@ -70,30 +70,6 @@ void main_program() {
 }
 
 
-void loop() {
-    // Clear the serial buffer.
-    while(Serial.available() > 0) {
-        char inChar = Serial.read();
-    }
-
-    Serial.println("DataTome  |  RunningMedian  |  VectorStats");
-
-    int run_count = 0;
-    while (run_count < RUNS) {
-        main_program();
-        run_count ++;
-    }
-
-    Serial.println("DataTome  |  RunningMedian  |  VectorStats");
-
-    // Press any key to begin again...
-    while(!Serial.available()) {
-        delay(1000);
-    }
-
-}
-
-
 void setup() {
     Serial.begin(BAUD_RATE);
     pinMode(ANALOG_INPUT, INPUT);
@@ -104,4 +80,27 @@ void setup() {
 
     running_median.setSearchMode(1);  // Sets faster binary serach mode.
     Serial.println("\nTimes Printed In Microseconds.\n");
+}
+
+
+void loop() {
+    Serial.println("DataTome  |  RunningMedian  |  VectorStats");
+
+    int run_count = 0;
+    while (run_count < RUNS) {
+        main_program();
+        run_count ++;
+    }
+
+    Serial.println("DataTome  |  RunningMedian  |  VectorStats");
+
+    // Clear the serial buffer.
+    while(Serial.available() > 0) {
+        char inChar = Serial.read();
+    }
+    Serial.print("\nPress any key to begin again...");
+    while(!Serial.available()) {
+        delay(1000);
+    }
+
 }
