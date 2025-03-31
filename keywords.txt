@@ -1,4 +1,4 @@
-# Syntax Coloring Map for Calculator
+# Syntax Coloring Map for VectorStats
 
 # Data types (KEYWORD1)
 VectorStats   KEYWORD1
